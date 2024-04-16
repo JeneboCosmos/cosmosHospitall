@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        outline: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        
+    }
+    .html{
+        font-size: 55%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 18%;
+        overflow-x: hidden;
+    }
+    .header{
+        background-color: darkgreen;
+        display: flex;
+        
+        
+        justify-content: space-between;
+        width: 100%;
+        position: fixed;
+        padding: 1rem;
+        top: 0;right: 0;left: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+    }
+    .logo{
+        color: rgb(217, 214, 214);
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 2rem;
+    }
+    .navbar{
+        width: 50%;
+        margin-left: 4rem;
+        
+    }
+    .navbar a{
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        color: rgb(222, 219, 219);
+        margin: 0 2%;
+        
+    }
+    .icons{
+        
+        color: #000000;
+        width: 10%;
+        margin-left: 2rem;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .icons div{
+        margin: 0 7%;
+    }
+    .navbar a:hover{
+        color: orange;
+        
+    }
+    .navbar a::after{
+        content: '';
+        width: 100%;
+        height: 2rem;
+        background-color: orange;
+        opacity: 1;
+    }
+    .icons div:hover{
+        color: orange;
+    }
+    .home{
+        background-color: darkgreen;
+        width: 100%;
+        height: 100vh;
+        background-image: url("te.PNG");
+        background-size: cover;
+        background-position: center;
+        
+    }
+    section{
+        height: 100vh;
+    }
+
+    .container{
+        align-items: center;
+        margin-top: 3rem;
+        
+        display: flex;
+        flex-wrap: wrap;
+        height: 70vh;
+        margin-left: 6rem;
+    }
+    .heading{
+        color: black;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+    h1{
+
+        font-weight: bolder;
+        color: orange;
+        font-size: 3.5rem;
+    }
+    span{
+        font-weight: bold;
+        font-size: 2;
+        color: orange;
+    }
+    h4{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: -2rem;
+    }
+    .btnn{
+        background-color: green;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 1rem;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+        margin-top: 1rem;
+        transition: 1s;
+        display: block;
+        width: 24.5rem;
+    }
+    .btnn:hover{
+        color: brown;
+        background-color: orange;
+    }
+    .btn{
+        background-color: green;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 1rem;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+        margin-top: 1rem;
+        transition: 1s;
+    }
+    .btn:hover{
+        color: brown;
+        background-color: orange;
+    }
+    .container-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .text{
+        height: 20rem;
+        width: 33rem;
+        margin: 0 3%;
+        margin-top: -7.5rem;
+
+    }
+    .text p{
+        margin-bottom: 1.8rem;
+    }
+    h2{
+        color: orange;
+        font-size: 2rem;
+        font-weight: bold;
+        
+    }
+    .imag img{
+        height: 25rem;
+        transition: 1s;
+        
+    }
+    .imag img:hover{
+        transform: scale(0.9);
+    }
+    .tree{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .leaf{
+        width: 23rem;
+        height: 21rem;
+        margin: 0 .7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icons{
+        display: flex;
+    }
+    .leaf img{
+        height: 19rem;
+        width: 100%;
+    }
+    h3{
+        position: absolute;
+        color: orange;
+        margin-top: 130px;
+        text-align: center;
+        opacity: 0;
+        font-weight: bold;
+        font-weight: 2rem;
+        transition: 1s;
+        
+    }
+    .leaf:hover h3{
+        opacity: 1;
+    }
+    .iconss{
+        position: absolute;
+        margin-bottom: 50px;
+        width: 30%;
+        
+        transition: 1s;
+
+    }
+    :hover.iconss div{
+        opacity: 1;
+    }
+    .iconss div{
+        margin: 0 3%;
+        color: brown;
+        opacity: 1;
+        
+    }
+    .leaf p{
+        position: absolute;
+        margin-bottom: -10px;
+        opacity: 0;
+        text-align: center;
+        color: rgb(212, 220, 212);
+        font-weight: bold;
+        transition: 1s;
+    }
+    .leaf:hover p{
+        opacity: 1;
+
+    }
+    .leaf img{
+        transition: 1s;
+    }
+    .leaf:hover img{
+        opacity: .7;
+    }
+    .house{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .room{
+        width: 16rem;
+        height: 15rem;
+        margin: .4% .7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+        border: 2px solid rgb(241, 12, 149);
+        transition: 1s;
+
+    }
+    .imagee img{
+        width: 5rem;
+        height: 5rem;
+        
+    }
+    .room:hover{
+        transition: 1s;
+        transform: scale(0.9);
+    }
+    .sp{
+        margin-top: -14rem;
+    }
+    .doctor{
+        margin-top: -10rem;
+    }
+    .book{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .paper{
+        width: 23rem;
+        height: 26rem;
+        margin: .4% .7%;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+        transition: 1s;
+        text-align: center;
+        
+
+    }
+    .profile img{
+        width: 6rem;
+        height: 6rem;
+        overflow: hidden;
+        border-radius: 5rem;
+
+    }
+    .profile{
+        width: 6rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        border: 5px solid rgb(241, 12, 149);
+        margin-left: 8rem;
+        margin-top: 2rem;
+        border-radius: 5rem;
+        transition: 1S;
+
+    }
+    :hover.profile{
+        transform: translateY(-60px);
+    }
+    h5{
+        font-weight: bold;
+        font-size: 1.5rem;
+        
+    }  
+    .icon div{
+        color: orange;
+        font-size: 1.3rem;
+    }
+    :hover.paper{
+        background-color: dodgerblue;
+    }
+    .paper:hover p{
+        color: white;
+        transition: 1s;
+
+    } 
+    .paper:hover h5{
+        color: brown;
+    }
+    .computer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(219, 223, 227);
+        
+    }form{
+        width: 20rem;
+        height: 21rem;
+        margin: 0% 19%;
+        margin-left: -6rem;
+    }
+    .boxx{
+        width: 25rem;
+        margin: 2% 0;
+        padding: .7rem;
+        border-radius: 5px;
+    }
+    .pro img{
+        margin: 2%;
+        width: 20rem;
+        height: 20rem;
+    }
+    #men{
+        cursor: pointer;
+        display: none;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .imo{
+        margin: 0 7%;
+    }
+    .foot{
+        height: 15rem;
+        margin-top: -12rem;
+        background-color: rgb(55, 52, 52);
+        display: 5px;
+        border-radius: 5px;
+        color: rgb(184, 173, 173);
+    }
+    .coss{
+        text-align: center;
+        color: orange;
+    }
+
+
+
+
+
+    @media(max-width: 768px){
+        .html{
+            font-size: 55%;
+
+        }
+        #men{
+            display: block;
+            opacity: 1;
+        }
+        .navbar{
+            position: absolute;
+            top: 110%;right: 2rem;
+            background-color: blue;
+            width: 15rem;
+            border-radius: 5px;
+            border: 2px solid coral;
+            flex-direction: column;
+            height: 15rem;
+            opacity: 0;
+            transform-origin: top right;
+            transform: scale(1);
+            text-align: center;
+            
+
+
+        }.navbar a{
+            display: block;
+            margin: 6%;
+            color: rgb(196, 200, 203);
+        }
+        .icons{
+            margin-right: 2rem;
+        }
+        .active{
+            opacity: 1;
+
+        }
+        .text{
+            margin-top: 1rem;
+        }
+        
+        .doctor{
+            margin-top: 14rem;
+        }
+        .sp{
+            margin-top: 28rem;
+        }
+        .review{
+            margin-top: 100rem;
+            
+        }
+        .room{
+            width: 23rem;
+            margin: 2%;
+        }
+        .paper{
+            margin: 2%;
+        }
+        .contact{
+            margin-top: 48rem;
+        }
+        form{
+            width: 20rem;
+            margin-left: 1.3rem;
+        }
+        h1{
+            font-size: 2rem;
+        
+        }
+        h4{
+            font-size: 2rem;
+        }
+        .container{
+            margin-left: 1rem;
+        }
+        .foot{
+            margin-top: 7rem;
+            height: 30rem;
+
+        }
+        .footer{
+            height: 20rem;
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+</style>
+<body>
+    <div class="header">
+        <div class="logo">LifeCare</div>
+        <div class="navbar">
+            <a href="home.html">home</a>
+            <a href="#home">about</a>
+            <a href="doctors.html">Doctor</a>
+            <a href="#home">Specility;s</a>
+            <a href="#home">patient review</a>
+            <a href="#home">contact</a>
+        </div>
+        <div class="icons">
+            <div class="fas fa-search"></div>
+            <div id="men" class="fas fa-bars"></div>
+        </div>
+    </div>
+    .<section class="home">
+        <div class="container">
+            <div class="content">
+                <h1>the hospital that<br> care  for you</h1>
+                <h4>best team</h4>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="image">
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h1 class="heading">about<span> us</span></h1>
+        <div class="container-content">
+            <div class="imag">
+                <img src="ty.PNG" alt="">
+            </div>
+            <div class="text">
+                <h2>the reason why we are the best</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatibus molestias dolores, assumenda mollitia voluptatem nam deserunt temporibus praesentium fugit obcaecati asperiores aspernatur earum eligendi accusamus atque quis sunt saepe.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse placeat dolores ex ducimus quasi neque blanditiis temporaLorem ipsum dolor sit amet consectetur adipisicing elit. Esse placeat dolores ex ducimus quasi neque blanditiis tempora ipsa molestiae unde?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates veritatis nemo explicabo suscipit laborum consequatur natus magnam optio delectus?</p>
+                <a href="#" class="btn">Read more</a>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="doctor">
+        <h1 class="heading">our<span> doctors</span></h1>
+        <div class="tree">
+            <div class="leaf">
+                <img src="teac.PNG" alt="">
+                <h3>John</h3>
+                <div class="iconss">
+                    <div class="fas fa-instagram"></div>
+                    <div class="fas fa-facebook square"></div>
+                    <div class="fas fa-instagram"></div>
+                    <div class="fas fa-instagram"></div>
+                    
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Iure, mollitia!<br>we are the best</p>
+            </div>
+            <div class="leaf">
+                <img src="teac.PNG" alt="">
+                <h3>John</h3>
+                <div class="iconss">
+                    <div class="fas fa-instagram"></div>
+                    <div class="fas fa-facebook"></div>
+                    <div class="fas fa-instagram"></div>
+                    <div class="fas fa-instagram"></div>
+                    
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Iure, mollitia!<br>we are the best</p>
+            </div>
+            <div class="leaf">
+                <img src="teach.PNG" alt="">
+                <h3>John</h3>
+                <div class="iconss">
+                    <div class="fas fa-instagram"></div>
+                    <div class="fas fa-facebook"></div>
+                    <div class="fas fa-instagram"></div>
+                    <div class="fas fa-instagram"></div>
+                    
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Iure, mollitia!<br>we are the best</p>
+            </div>
+        </div>
+    </section>
+    <section class="sp">
+        <h1 class="heading">areas we are<span> specility on</span></h1>
+        <div class="house">
+            <div class="room">
+                <div class="imagee">
+                    <img src="images.png" alt="">
+                    <p> succesfully knee surgery</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fugit!</p>
+                </div>
+            </div>
+            <div class="room">
+                <div class="imagee">
+                    <img src="images.png" alt="">
+                    <p> succesfully knee surgery</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fugit!</p>
+                </div>
+            </div>
+            <div class="room">
+                <div class="imagee">
+                    <img src="images.png" alt="">
+                    <p> succesfully knee surgery</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fugit!</p>
+                </div>
+            </div>
+            <div class="room">
+                <div class="imagee">
+                    <img src="images.png" alt="">
+                    <p> succesfully knee surgery</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fugit!</p>
+                </div>
+            </div>
+            <div class="room">
+                <div class="imagee">
+                    <img src="images.png" alt="">
+                    <p> succesfully knee surgery</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fugit!</p>
+                </div>
+            </div>
+            <div class="room">
+                <div class="imagee">
+                    <img src="images.png" alt="">
+                    <p> succesfully knee surgery</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fugit!</p>
+                </div>
+            </div>
+            <div class="room">
+                <div class="imagee">
+                    <img src="images.png" alt="">
+                    <p> succesfully knee surgery</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fugit!</p>
+                </div>
+            </div>
+            <div class="room">
+                <div class="imagee">
+                    <img src="images.png" alt="">
+                    <p> succesfully knee surgery</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fugit!</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="review">
+        <h1 class="heading">our patient's<span> review</span></h1>
+        <div class="book">
+            <div class="paper">
+                <div class="profile">
+                    <img src="ty.PNG" alt="">
+                </div>
+                
+                <div class="icon">
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iure, magni cupiditate natus dicta ad, porro odit placeat quae dignissimos magnam omnis animi ipsum eveniet molestias itaque, recusandaeipsum dolor sit amet consectetur adipisicing elit. Asperiores iure, magni cupiditate natus dicta ad, porro odit placeat quae dignissimos magnam omnis animi ipsum eveniet molestias itaque, recusandae blanditiis blanditiis repudiandae!</p>
+                <h5>John Boadu</h5>
+            </div>
+            <div class="paper">
+                <div class="profile">
+                    <img src="ty.PNG" alt="">
+                </div>
+               
+                <div class="icon">
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iure, magni cupiditate natus dicta ad, porro odit placeat quae dignissimos magnam omnis animi ipsum eveniet molestias itaque, recusandae blanditiisipsum dolor sit amet consectetur adipisicing elit. Asperiores iure, magni cupiditate natus dicta ad, porro odit placeat quae dignissimos magnam omnis animi ipsum eveniet molestias itaque, recusandae blanditiis repudiandae!</p>
+                <h5>John Boadu</h5>
+            </div>
+            <div class="paper">
+                <div class="profile">
+                    <img src="ty.PNG" alt="">
+                </div>
+                
+                <div class="icon">
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iure, magni cupiditate natus dicta ad, porro odit placeat quae dignissimos magnam omnis animiipsum dolor sit amet consectetur adipisicing elit. Asperiores iure, magni cupiditate natus dicta ad, porro odit placeat quae dignissimos magnam omnis animi ipsum eveniet molestias itaque, recusandae blanditiis ipsum eveniet molestias itaque, recusandae blanditiis repudiandae!</p>
+                <h5>John Boadu</h5>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h1 class="heading">contact<span> us</span></h1>
+        <div class="computer">
+            <form action="">
+                <input type="name" placeholder="Name" class="boxx">
+                <input type="email" placeholder="Email" class="boxx">
+                <input type="number" placeholder="Number" class="boxx">
+                <textarea rows="" placeholder="Send message" class="boxx" cols=""></textarea>
+                <a href="#" class="btnn">submit</a>
+
+            </form>
+            <div class="pro">
+                <img src="ty.PNG" alt="">
+            </div>
+        </div>
+
+    </section>
+    <section class="foot">
+        <div class="footer">
+            <div class="imo">
+                <h5>Quick links</h5>
+                <p>home</p>
+                <p>about</p>
+                <p>doctor</p>
+                <p>contact</p>
+            </div>
+            <div class="imo">
+                <h5>extra links</h5>
+                <p>cosmos@gmail.com</p>
+                <p>about</p>
+                <p>doctor</p>
+                <p>contact</p>
+            </div>
+            <div class="imo">
+                <h5>locations</h5>
+                <p>india</p>
+                <p>ghana</p>
+                <p>togo</p>
+                <p>nageria</p>
+            </div>
+            <div class="imo">
+                <h5>contacts</h5>
+                <p>+223 256 463 346</p>
+                <p>+233 948 309 676</p>
+                <p>doctor</p>
+                <p>contact</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        let menu = document.querySelector('#men');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () =>{
+            menu.classList.toggle('fa-time');
+            navbar.classList.toggle('active');
+        }
+        menu.onscroll= () =>{
+            menu.classList.remove('fa-time');
+            navbar.classList.remove('active');
+        }
+    </script>
+    
+</body>
+<p class="coss">this website is creater by cosmos a student of university of ghana</p>
+</html>
